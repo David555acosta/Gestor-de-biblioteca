@@ -26,7 +26,7 @@ namespace BiblioV1
 
         public Revista(string unTitulo, string unAutor, int unStock, int unNumero, string unaFrecuencia , bool estadoPrestacion , decimal unPrecio)
         {
-            this.Titutlo = unTitulo;
+            this.Titulo = unTitulo;
             this.Autor = unAutor;
             this.ActualizarStock(unStock);
             this.Numero= unNumero;
@@ -39,7 +39,7 @@ namespace BiblioV1
 
         public override void MostrarDetalles()
         {
-            Console.WriteLine($"Titulo: {Titutlo} , Autor: {Autor} , Numero: {Numero} , Frecuencia: {Frecuencia}");
+            Console.WriteLine($"Titulo: {Titulo} , Autor: {Autor} , Numero: {Numero} , Frecuencia: {Frecuencia}");
         }
     }
 }

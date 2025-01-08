@@ -113,7 +113,7 @@ namespace BiblioV1
             // Verifica si el título está en la lista y tiene stock
             if (HayStockYEstaEnListaElTitulo_(unTitulo))
             {
-                // Encuentra la publicación correspondiente
+                // Encuentra la publicación correspondiente - se realiza este procedimiento para encontrar un titulo y acceder a sus campos mediante el string.
                 Publicacion publicacion = Publicaciones.FirstOrDefault(item =>
                     item.Titutlo.Equals(unTitulo, StringComparison.OrdinalIgnoreCase));
 

@@ -17,7 +17,7 @@ namespace BiblioV1
 {
     internal class Publicacion : IBibliotec
     {
-        public string Titutlo { get; set; }
+        public string Titulo { get; set; }
 
         public string Autor {  get; set; }
 

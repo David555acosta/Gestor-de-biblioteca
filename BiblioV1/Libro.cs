@@ -25,7 +25,7 @@ namespace BiblioV1
         //Constructor 
         public Libro(string unTitulo, string unAutor, int unStock, int unIsbn, string unGenero , bool estadoPrestacion , decimal unPrecio)
         {
-            this.Titutlo = unTitulo;
+            this.Titulo = unTitulo;
             this.Autor = unAutor;
             this.ActualizarStock(unStock); 
             this.ISBN = unIsbn;
@@ -39,7 +39,7 @@ namespace BiblioV1
 
         public override void MostrarDetalles ()
         {
-            Console.WriteLine($"Titulo: {Titutlo} , Autor: {Autor} , ISBN: {ISBN} , Genero: {Genero}");
+            Console.WriteLine($"Titulo: {Titulo} , Autor: {Autor} , ISBN: {ISBN} , Genero: {Genero}");
         }
     }
 }
