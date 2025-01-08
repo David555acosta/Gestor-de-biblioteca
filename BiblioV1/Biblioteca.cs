@@ -52,7 +52,7 @@ namespace BiblioV1
         {
             foreach (Publicacion item in Publicaciones)
             {
-                if (item.Titutlo == publicacion.Titutlo)
+                if (item.Titulo == publicacion.Titulo)
                 {
                     return false;
                 }
@@ -84,9 +84,9 @@ namespace BiblioV1
         {
             foreach (Publicacion item in Publicaciones)
             {
-                if (item.Titutlo.Equals(publicacion, StringComparison.OrdinalIgnoreCase))
+                if (item.Titulo.Equals(publicacion, StringComparison.OrdinalIgnoreCase))
                 {
-                    return item.Titutlo;
+                    return item.Titulo;
                 }
             }
 
@@ -101,7 +101,7 @@ namespace BiblioV1
         {
             foreach (var item in Publicaciones)
             {
-                Console.WriteLine(item.Titutlo);
+                Console.WriteLine(item.Titulo);
             }
         }
 
@@ -115,7 +115,7 @@ namespace BiblioV1
             {
                 // Encuentra la publicación correspondiente - se realiza este procedimiento para encontrar un titulo y acceder a sus campos mediante el string.
                 Publicacion publicacion = Publicaciones.FirstOrDefault(item =>
-                    item.Titutlo.Equals(unTitulo, StringComparison.OrdinalIgnoreCase));
+                    item.Titulo.Equals(unTitulo, StringComparison.OrdinalIgnoreCase));
 
 
                 if (publicacion != null && publicacion.EstaPrestada) //Evaluar que exista la publicacion.
@@ -157,7 +157,7 @@ namespace BiblioV1
                 //Funcionlaidad para evaluar si un titulo
                 //Esta en la lista sin tener en cuenta las mayusculas y minusculas.
 
-                if (item.Titutlo.Equals(unTitulo ,StringComparison.OrdinalIgnoreCase))
+                if (item.Titulo.Equals(unTitulo ,StringComparison.OrdinalIgnoreCase))
                 {
                     return true;
                 }
@@ -175,7 +175,7 @@ namespace BiblioV1
         {
             foreach(Publicacion item in Publicaciones)
             {
-                if (item.Titutlo.Equals(unTitulo , StringComparison.OrdinalIgnoreCase))
+                if (item.Titulo.Equals(unTitulo , StringComparison.OrdinalIgnoreCase))
                 {
                     return item.Stock > 0;
                 }
@@ -193,7 +193,7 @@ namespace BiblioV1
         {
             // Encuentra la publicación correspondiente
             Publicacion publicacion = Publicaciones.FirstOrDefault(item =>
-            item.Titutlo.Equals(unTitulo, StringComparison.OrdinalIgnoreCase));
+            item.Titulo.Equals(unTitulo, StringComparison.OrdinalIgnoreCase));
 
 
 
@@ -276,7 +276,7 @@ namespace BiblioV1
 
             // Encuentra la publicación correspondiente
             Publicacion publicacion = Publicaciones.FirstOrDefault(item =>
-            item.Titutlo.Equals(unTitulo, StringComparison.OrdinalIgnoreCase));
+            item.Titulo.Equals(unTitulo, StringComparison.OrdinalIgnoreCase));
             
 
             if (EsPosibleRealizarCompra(unTitulo, unaCantidad))
@@ -315,7 +315,7 @@ namespace BiblioV1
 
             foreach (Publicacion item in Publicaciones)
             {
-                if (item.Titutlo.Equals(unTituloX, StringComparison.OrdinalIgnoreCase))
+                if (item.Titulo.Equals(unTituloX, StringComparison.OrdinalIgnoreCase))
                 {
                     return item.Stock >= unaCantidadX;
                 }

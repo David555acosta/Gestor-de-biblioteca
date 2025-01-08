@@ -67,7 +67,7 @@ namespace BiblioV1
 
             foreach (Libro item in ListaLibros)
             {
-                Console.WriteLine(item.Titutlo);
+                Console.WriteLine(item.Titulo);
             }
         }
     }
