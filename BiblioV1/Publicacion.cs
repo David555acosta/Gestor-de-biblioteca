@@ -15,7 +15,7 @@ ActualizarStock(int cantidad): Actualiza el stock de la publicación.
 
 namespace BiblioV1
 {
-    internal class Publicacion
+    internal class Publicacion : IBibliotec
     {
         public string Titutlo { get; set; }
 
@@ -61,6 +61,24 @@ namespace BiblioV1
         public void ActualizarStock (int UnaCantidad)
         {
             Stock = UnaCantidad;    
+        }
+
+
+
+
+        public void RealizarCompra(string unTitulo, int unaCantidad)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool EsPosibleRealizarCompra(string unTitulo, int unaCantidad)
+        {
+            throw new NotImplementedException();
+        }
+
+        public decimal TotalCompra(int unaCantidad, decimal unPrecio)
+        {
+            throw new NotImplementedException();
         }
     }
 }

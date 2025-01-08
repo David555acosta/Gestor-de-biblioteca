@@ -47,7 +47,7 @@ namespace BiblioV1
         public void ComprarLibro (string tituloLibro , int cantidadComprar)
         {
             BibliotecaX.RealizarCompra(tituloLibro, cantidadComprar); // Accedemos al metodo de la biblioteca mediante Polimorfismo y inyeccion de dependencias.
-            Console.WriteLine($"Usted realizo la compra de {cantidadComprar} unidades del titulo : {tituloLibro}");
+
         }
     }
 }

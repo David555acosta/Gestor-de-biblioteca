@@ -277,12 +277,15 @@ namespace BiblioV1
             // Encuentra la publicación correspondiente
             Publicacion publicacion = Publicaciones.FirstOrDefault(item =>
             item.Titutlo.Equals(unTitulo, StringComparison.OrdinalIgnoreCase));
+            
 
             if (EsPosibleRealizarCompra(unTitulo, unaCantidad))
             {
                 publicacion.Stock -= unaCantidad;
 
-                Console.WriteLine($"stock disponible : {publicacion.Stock}");
+                decimal totalCompra = TotalCompra(unaCantidad, publicacion.Precio);
+
+                Console.WriteLine($"stock disponible : {publicacion.Stock} , total con descuentos : {totalCompra}");
 
             } else
             {
@@ -320,6 +323,48 @@ namespace BiblioV1
 
             return false;
         }
-       
+
+
+        //Metodo agregado para mostrar el monto total y el descuento.
+
+        public decimal TotalCompra(int cantidadEvaluar , decimal unPrecioEvaluar)
+        {
+            decimal descuento = 0m;
+
+            decimal total;
+
+            if (cantidadEvaluar > 0 && cantidadEvaluar <= 10)
+            {
+                descuento = 0.1m; 
+
+
+            } else if (cantidadEvaluar > 10 && cantidadEvaluar <= 20)
+
+            {
+                descuento = 0.2m;
+
+            } else if (cantidadEvaluar > 20)
+            {
+                descuento = 0.3m;
+
+            } else
+            {
+                descuento = 0.5m;
+            }
+
+            decimal precioFinal = unPrecioEvaluar - descuento;
+
+            total = cantidadEvaluar * precioFinal;
+
+            return total;
+        }
     }
 }
+
+
+//Precio inicial
+
+///Cantidad 
+
+// Cantidad * (precioFinal) = precioInicial + recargo
+

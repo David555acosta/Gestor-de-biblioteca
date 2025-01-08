@@ -11,5 +11,7 @@ namespace BiblioV1
         void RealizarCompra(string unTitulo, int unaCantidad);
 
         bool EsPosibleRealizarCompra(string unTitulo, int unaCantidad);
+
+        decimal TotalCompra(int unaCantidad , decimal unPrecio);
     }
 }

@@ -94,7 +94,7 @@ namespace BiblioV1
                                          //Libro ----> Titulo , NombreAutor , stock , ISBM , Estilo , estadoPrestacion , Precio.}
              //Instansia de Libros
             Libro CienAñosdeSoledad = new Libro("Cien años de soledad", "Gabriel García Márquez", 44, 661, "Novela" , true ,400m);
-            Libro ElAmorEnLosTiemposDelColera = new Libro("El amor en los tiempos del cólera", "Gabriel García Márquez", 50, 432, "Romance" , true , 500.55m);
+            Libro ElAmorEnLosTiemposDelColera = new Libro("El amor en los tiempos del cólera", "Gabriel García Márquez", 50, 432, "Romance" , true , 500m);
             Libro LasVenasAbiertasDeAmericaLatina = new Libro("Las venas abiertas de América Latina", "Eduardo Galeano", 30, 360, "Historia", true , 300m);
             Libro Rayuela = new Libro("Rayuela", "Julio Cortázar", 38, 500, "Ficción" , true, 1500.200m);
             Libro DonQuijoteDeLaMancha = new Libro("Don Quijote de la Mancha", "Miguel de Cervantes", 60, 863, "Clásico", true , 10000.500m);
@@ -126,8 +126,7 @@ namespace BiblioV1
 
             Usuario David = new Usuario("David" , 52096266 , biblioteca);
 
-            David.ComprarLibro("Rayuela", 37);
-            David.ComprarLibro("Rayuela", 1);
+            David.ComprarLibro("El amor en los tiempos del cólera", 10);
         }
     }
 }
