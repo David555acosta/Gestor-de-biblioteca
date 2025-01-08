@@ -352,11 +352,14 @@ namespace BiblioV1
                 descuento = 0.5m;
             }
 
-            decimal precioFinal = unPrecioEvaluar - descuento;
+            // Calcular el precio con descuento
+            decimal precioFinal = unPrecioEvaluar * (1 - descuento);
 
+            // Calcular el total
             total = cantidadEvaluar * precioFinal;
 
-            return total;
+            // Redondear hacia arriba y devolver
+            return Math.Ceiling(total); // Redondear para arriba
         }
     }
 }
